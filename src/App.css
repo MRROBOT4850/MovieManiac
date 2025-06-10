@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App,
+body,
+html {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.copyright {
+    position: sticky;
+    text-align: center;
+    color: #ccccff41;
+    font-family: "lato";
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 166%;
+}
+
+@media(max-width:440px) {
+    .copyright {
+        font-size: 14px;
+    }
+}

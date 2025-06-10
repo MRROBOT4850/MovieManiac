@@ -1,0 +1,33 @@
+.movie__list {
+    padding: 0 3rem 3rem 3rem;
+}
+
+.list__title {
+    font-size: 1.75rem;
+    margin: 2.5rem;
+    text-align: center;
+
+}
+
+.list__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+.load-btn {
+  display: block;
+  margin: 30px auto; 
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF; 
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.load-btn:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,149 @@
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  background: black;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  
+}
+
+.headerLeft a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.headerLeft a:hover {
+  transform: scale(1.1);
+}
+
+.headerLeft a span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f9f9f9;
+  transition: color 0.3s ease;
+}
+
+.headerLeft a span:hover {
+  color: #fdbb2d; /* Accent color */
+}
+
+.header__icon {
+  width: 120px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+
+.headerRight {
+  position: relative;
+}
+
+.headerRight input {
+  height: 2.2rem;
+  padding: 0 35px 0 15px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: width 0.4s ease, background-color 0.3s ease;
+  width: 10rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.headerRight input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.headerRight input:focus {
+  outline: none;
+  width: 18rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+._searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  
+  .headerLeft {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+  }
+  
+  .headerRight {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .headerLeft a span {
+    font-size: 1rem;
+  }
+  
+  .header__icon {
+    width: 100px;
+  }
+  
+  .headerRight input {
+    width: 8rem;
+    font-size: 0.9rem;
+  }
+  
+  .headerRight input:focus {
+    width: 14rem;
+  }
+  
+  ._searchIcon {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .headerLeft a span {
+    font-size: 0.9rem;
+  }
+  
+  .header__icon {
+    width: 80px;
+  }
+  
+  .headerRight input {
+    width: 6rem;
+    font-size: 0.8rem;
+  }
+  
+  .headerRight input:focus {
+    width: 10rem;
+  }
+  
+  ._searchIcon {
+    font-size: 16px;
+  }
+}

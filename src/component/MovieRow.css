@@ -1,0 +1,70 @@
+.movieRow {
+    margin: 20px 0;
+    position: relative;
+}
+
+.movieRow__title {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.movieRow__wrapper {
+    position: relative;
+}
+
+.movieRow__slider {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 20px;
+    gap: 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.movieRow__slider::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    z-index: 10;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.scrollBtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scrollBtn.left {
+    left: 0;
+}
+
+.scrollBtn.right {
+    right: 0;
+}
+
+.loader {
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .scrollBtn {
+        display: none;
+    }
+}
+
