@@ -47,7 +47,7 @@ function App() {
           <Route path='movie/:id' element={<Movie />}></Route>
           <Route path='movies/:type' element={<MovieList />}></Route>
           <Route path='search/:movie' element={<Search />}></Route>
-          <Route path='/*' element={<h1> Wrong Page</h1>}></Route>
+          <Route path='/*' element={<h1>404 : Page Not Found</h1>}></Route>
         </Routes>
       </BrowserRouter>
       <div className="copyright">Developed by Shivam Chaudhary • 2025</div>
