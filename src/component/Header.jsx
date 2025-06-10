@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 import "./Header.css"
 import { Link, useNavigate } from 'react-router-dom'
 import { BsSearch } from "react-icons/bs";
@@ -12,7 +12,9 @@ const Header = () => {
         setChangedValue(e.target.value);
     };
 
-
+     useEffect(()=>{
+        setChangedValue("");
+    },[])
     const onKeyDown = (e) => {
         if (e.key === "Enter") {
             navigate(`/search/${changedValue}`)
