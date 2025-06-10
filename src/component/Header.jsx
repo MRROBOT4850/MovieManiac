@@ -1,6 +1,6 @@
 import React, { useState ,useEffect} from 'react'
 import "./Header.css"
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import { BsSearch } from "react-icons/bs";
 import { useNavigate, useLocation } from 'react-router-dom';
  
