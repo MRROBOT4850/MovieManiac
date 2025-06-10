@@ -2,19 +2,19 @@ import React, { useState ,useEffect} from 'react'
 import "./Header.css"
 import { Link, useNavigate } from 'react-router-dom'
 import { BsSearch } from "react-icons/bs";
-
-
+import { useNavigate, useLocation } from 'react-router-dom';
+ 
 const Header = () => {
     const navigate = useNavigate()
-
+    const location = useLocation();
     const [changedValue, setChangedValue] = useState("");
     const changeHandler = (e) => {
         setChangedValue(e.target.value);
     };
 
-     useEffect(()=>{
+    useEffect(() => {
         setChangedValue("");
-    },[])
+    }, [location]);
     const onKeyDown = (e) => {
         if (e.key === "Enter") {
             navigate(`/search/${changedValue}`)
