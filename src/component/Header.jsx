@@ -11,7 +11,9 @@ const Header = () => {
     const changeHandler = (e) => {
         setChangedValue(e.target.value);
     };
-
+    const clickHandler=()=>{
+        navigate(`/search/${changedValue}`)
+     }
     useEffect(() => {
         setChangedValue("");
     }, [location]);
@@ -19,9 +21,7 @@ const Header = () => {
         if (e.key === "Enter") {
             navigate(`/search/${changedValue}`)
         }
-     const clickHandler=()=>{
-        navigate(`/search/${changedValue}`)
-     }
+     
     };
     return (
         <div className='Header'>
