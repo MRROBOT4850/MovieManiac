@@ -40,11 +40,15 @@ useEffect(() => {
     //     getData()
     // }, [page]);
 
-   useEffect(() => {
-    getData()
-    setPage(1);
+ useEffect(() => {
+    // Reset when type changes
     setMovieList([]);
-}, [page,type]);
+    setPage(1);
+}, [type]);
+
+useEffect(() => {
+    getData();
+}, [page]);
 
     //const api=https://api.themoviedb.org/3/discover/movie?api_key=YOUR_API_KEY&with_genres=28-action,12-adventuure,35-comedy
 
