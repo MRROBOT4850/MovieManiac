@@ -19,6 +19,9 @@ const Header = () => {
         if (e.key === "Enter") {
             navigate(`/search/${changedValue}`)
         }
+     const clickHandler=()=>{
+        navigate(`/search/${changedValue}`)
+     }
     };
     return (
         <div className='Header'>
@@ -38,7 +41,7 @@ const Header = () => {
                     value={changedValue}
                     onChange={(e) => changeHandler(e)}
                 />
-                <BsSearch className="_searchIcon" />
+                <BsSearch onClick={clickHandler} className="_searchIcon" />
             </div>
         </div>
     )
