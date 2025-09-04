@@ -3,6 +3,7 @@ import "./Header.css"
 import { Link} from 'react-router-dom'
 import { BsSearch } from "react-icons/bs";
 import { useNavigate, useLocation } from 'react-router-dom';
+import MenuBar from './MenuBar';
  
 const Header = () => {
     const navigate = useNavigate()
@@ -32,6 +33,8 @@ const Header = () => {
                 <Link to="movies/35"><span>Comedy</span></Link>
                 <Link to="movies/27"><span>Horror</span></Link>
                 <Link to="movies/16"><span>Animated</span></Link>
+                <Link to="/dashboard"><span>DashBoard</span></Link>
+                {/* <MenuBar/> */}
             </div>
             <div className='headerRight'>
                 <input

@@ -24,7 +24,7 @@ const Cards = ({ movie }) => {
                 </div>
                 :
                 
-                <Link to={`/movie/${movie.id}`} style={{ textDecoration: "none", color: "white" }}>
+                <Link to={`/movie/${movie.tmdbId || movie._id || movie.id} `} style={{ textDecoration: "none", color: "white" }}>
                     { movie.poster_path &&
                         <div className="cards">
                         <img className="cards__img" alt="" src={`https://image.tmdb.org/t/p/original${movie ? movie.poster_path : ""}`} />
