@@ -144,8 +144,8 @@ const AuthModal = ({ mode: defaultMode = "login", onClose }) => {
 
       const res = await fetch(
         mode === "login"
-          ? "http://localhost:5000/api/users/login"
-          : "http://localhost:5000/api/users/signup",
+          ? "https://ghost-talk-3shn.onrender.com/api/users/login"
+          : "https://ghost-talk-3shn.onrender.com/api/users/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

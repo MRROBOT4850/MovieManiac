@@ -26,7 +26,7 @@ export const fetchFavorites = createAsyncThunk(
   "movies/fetchFavorites",
   async (userId, { rejectWithValue }) => {
     try {
-      const res = await axios.post(`http://localhost:5000/api/users/getfavorite`, { userId });
+      const res = await axios.post(`https://ghost-talk-3shn.onrender.com/api/users/getfavorite`, { userId });
       return res.data.data.favorites || [];
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -39,7 +39,7 @@ export const fetchWatchLater = createAsyncThunk(
   "movies/fetchWatchLater",
   async (userId, { rejectWithValue }) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/watchlater`);
+      const res = await axios.get(`https://ghost-talk-3shn.onrender.com/api/users/watchlater`);
       return res.data.watchLater || [];
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
@@ -82,12 +82,12 @@ export const toggleFavorite = createAsyncThunk(
     try {
       if (isFavorite) {
         // remove favorite
-        await axios.post(`http://localhost:5000/api/users/removeFavorite`, { userId, movieId: movie.id });
+        await axios.post(`https://ghost-talk-3shn.onrender.com/api/users/removeFavorite`, { userId, movieId: movie.id });
         return { movie, action: "remove" };
       } else {
         // add favorite
-        await axios.post(`http://localhost:5000/api/users/favorites`, { userId, movieId: movie.id });
-        await axios.post(`http://localhost:5000/api/movies/add`, movie); // save movie details
+        await axios.post(`https://ghost-talk-3shn.onrender.com/api/users/favorites`, { userId, movieId: movie.id });
+        await axios.post(`https://ghost-talk-3shn.onrender.com/api/movies/add`, movie); // save movie details
         return { movie, action: "add" };
       }
     } catch (err) {
@@ -132,12 +132,12 @@ export const toggleWatchLater = createAsyncThunk(
     try {
       if (isWatchLater) {
         // remove watch later
-        await axios.post(`http://localhost:5000/api/users/removeWatchLater`, { userId, movieId: movie.id });
+        await axios.post(`https://ghost-talk-3shn.onrender.com/api/users/removeWatchLater`, { userId, movieId: movie.id });
         return { movie, action: "remove" };
       } else {
         // add watch later
-        await axios.post(`http://localhost:5000/api/users/watchlater`, { userId, movieId: movie.id });
-        await axios.post(`http://localhost:5000/api/movies/add`, movie); 
+        await axios.post(`https://ghost-talk-3shn.onrender.com/api/users/watchlater`, { userId, movieId: movie.id });
+        await axios.post(`https://ghost-talk-3shn.onrender.com/api/movies/add`, movie); 
         return { movie, action: "add" };
       }
     } catch (err) {
